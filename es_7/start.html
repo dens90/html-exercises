@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Lezione HTML</title>
+	<style>
+		body{background-color: rgba(90, 150, 173, 0.3);}
+
+		h1{text-align: center;}
+		
+		.container{
+			margin-left: 20%;
+			margin-top: 50px;
+			width: 50%;
+			background-color: rgba(89, 163, 170, 0.8);
+			padding: 3px;
+			border: 2px solid black;
+		}
+
+		span{display: inline-block;
+			width: 250px;
+			font-weight: bold;
+		}
+
+		label {display: block}
+
+		p{font-weight: bold;}
+		#field{
+			border: 1px solid black;
+			width: 90%;
+		}
+
+	
+	</style>
+</head>
+
+<body>
+
+
+<h1>Registrati </h1>
+<div class="container">
+	<form action="">
+		<section>
+			<header>
+				<h2>Compila il form inserendo i tuoi dati</h2>
+			</header>
+			<!-- Dati anagrafici -->
+		</section>
+		<label for="email">
+		<span>Inserisci la tua mail:</span> 
+			<input type="email" name="email" id="email" required>
+		</label>
+		<label for="password">
+		<span>Crea una password:</span> 
+			<input type="password" name="password" id="password" required>
+		</label>
+		<label for="name">
+			<span>Nome e cognome:</span>
+			<input type="text" name="name" id="name" required>
+		</label>
+		<label for="date">
+			<span>Data di nascita:</span>
+			<input type="date" name="date" id="date" min="1940-01-01" max="2018-01-01" required>
+		</label>
+		<label for="cell">
+			<span>Numero di telefono:</span>
+			<input type="tel" name="cell" id="cell" required>
+		</label>
+		<br>
+		<fieldset id="field">
+			<!-- piano abbonamento -->
+		</section>	
+			<header>
+				<h3>Piano di abbonamento mensile:</h3>
+			</header>
+		<select style="width: 50%;" name="subscription" id="subscription">
+			<option value="free">free (solo accesso a internet)</option>
+			<option value="standard">10€ (internet + spa)</option>
+			<option value="premium">20€ (internet + spa e massaggi)</option>	
+			<option value="deluxe">30€ (all inclusive)</option>
+		</select>
+		<!-- Vantaggi -->
+		<label for="vantaggi">
+			<span style="width: auto;"> Voglio usufruire dei vantaggi PRO</span>
+			<input type="checkbox" name="vantaggi" id="vantaggi"><br>
+			<span style="font-size: xx-small;">(a soli 2€ in più al mese)leggi informativa su:
+			<a href="#">info@spadeltempo.com</a></span>
+		</label>
+	</fieldset>
+	<!-- Dati carta di credito -->
+		<section>
+			<header>
+		<h2>Dati per il pagamento</h2>	
+			</header>
+		<label for="carta">
+			<span>Numero carta di credito:</span>
+			<input type="text" name="carta" id="carta" required>
+		</label>
+		<label for="cvc">
+			<span>Inserisci cvc:</span>
+			<input type="text" name="cvc" id="cvc" required>
+		</label>
+		<label for="scadenza">
+			<span>Data di scadenza:</span>
+			<input type="date" min="2022-01-21" max="2027-12-31" name="scadenza" id="scadenza" required>
+		</label>
+		<label for="indirizzo">
+			<span>Indirizzo fatturazione:</span>
+			<input type="text" name="indirizzo" id="indirizzo" required>
+		</label>
+		<br>
+		</section>
+		<input style="width: 50px;border-radius: 20px;padding:5px; background-color: blue;" type="button" value="invia" disable>
+	</form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
