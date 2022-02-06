@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 
-.container {
+body {
     background-color: black;
     display: flex;
     height: 100vh;
 
 }
 
-.wrapper {
+aside {
     width: 200px;
     height: 100vh;
     background-color: aquamarine;
@@ -60,7 +60,7 @@ a:hover {
     width: 100%;
 }
 
-.avatar>.img {
+.avatar>.image {
     width: 100px;
     height: 100px;
     border-radius: 50%;
