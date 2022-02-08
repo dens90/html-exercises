@@ -22,18 +22,16 @@ aside {
 }
 
 .logo {
-    width: 100%;
-    height: 30px;
+    width: 200px;
+    height: 150px;
     display: flex;
+    
+}
+.logo img{
+    border-radius: 20px;
+    margin-left: 25px;
 }
 
-.logo>input {
-    text-align: center;
-    width: 50%;
-    height: 100%;
-    border-radius: 10%;
-    margin: auto;
-}
 
 nav {
     display: flex;
