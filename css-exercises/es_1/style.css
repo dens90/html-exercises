@@ -1,16 +1,8 @@
 :root {
     /* var for ball */
     --bg-body: #011212;
-    --w_ball: 100px;
-    --h_ball: 100px;
+    --h-w_ball: 100px;
     --bg_ball: #ff8800;
-    --b_rad: 50px;
-
-    /* var for square */
-    --w_square: 200px;
-    --h_square: 200px;
-    --bg_square: #d40707;
-    --border: 1px solid black;
 }
 
 /* 
@@ -34,16 +26,9 @@ body {
 }
 
 .ball {
-    width: var(--w_ball);
-    height: var(--h_ball);
+    width: var(--h-w_ball);
+    height: var(--h-w_ball);
     background-color: var(--bg_ball);
-    border-radius: var(--b_rad);
+    border-radius: calc( var(--h-w_ball) - 50px );
 }
 
-.square {
-    margin: 100px;
-    width: var(--w_square);
-    height: var(--h_square);
-    background-color: var(--bg_ball);
-    border: var(--border);
-}
