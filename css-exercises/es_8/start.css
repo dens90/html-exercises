@@ -1,0 +1,32 @@
+body{
+    display: flex;
+}
+#green {
+    display: flex;
+    flex-flow: column wrap;
+    order: 2;
+  }
+  
+  #orange {
+    display: flex;
+    flex-flow: column wrap;
+    order:3;
+    flex-grow: 1;
+  }
+  
+  #yellow {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  
+  #red {
+    display: flex;
+    flex-flow: column wrap;
+    order:1;
+  }
+  
+  #blue {
+    display: flex;
+    flex-flow: column wrap;
+    order:4;
+  }
