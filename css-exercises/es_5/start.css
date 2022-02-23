@@ -1,0 +1,28 @@
+body {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "nav main aside"
+    "nav main-end aside"
+    ;
+  }
+  #green {
+    grid-area: header;
+    padding-bottom: 5rem;
+  }
+  
+  #orange {
+    grid-area: main;
+  }
+  
+  #yellow {
+    grid-area: nav;
+  }
+  #red {
+    grid-area: aside;
+  }
+  
+  #blue {
+    grid-area: main-end;
+  }
+  
