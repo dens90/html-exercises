@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cards-container {
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 22rem));
+    justify-content: center;
+    /* align-items: flex-start; */
+    gap: 2rem;
+
+}
+
+.card {
+    background-color: lightgrey;
+    border-radius: 20px;
+
+}
+
+.profile {
+
+    width: 100%;
+    min-width: 60px;
+    display: flex;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    align-items: center;
+}
+
+.name p:nth-child(2) {
+    color: white;
+    font-size: .77rem;
+}
+
+.dot div {
+    margin: .2rem;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.name {
+    width: 80%;
+    margin: .4rem;
+    line-height: 1.5rem;
+}
+
+.btn {
+    width: 4rem;
+    display: flex;
+    justify-self: flex-end;
+
+    margin-right: .3rem;
+
+}
+
+.btn p {
+    font-size: 1.5rem;
+}
+
+.main-card img {
+    max-width: 360px;
+    max-height: 250px;
+    width: 100%;
+}
+
+.foot-card {
+    padding: 1.2rem;
+
+
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+
+    width: 3rem;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+}
+
+.description span {
+    color: black;
+    font-weight: bold;
+
+}
+
+@media screen and (max-width:768px) {
+    .cards-container {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-width:378px) {
+
+    .cards-container {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .card {
+        margin: 0 auto;
+    }
+
+    p {
+        font-size: .6rem;
+    }
+}
