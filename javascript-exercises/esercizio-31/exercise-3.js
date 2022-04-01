@@ -1,7 +1,6 @@
 function calculateAverageAge(persons) {
   const etaMedia = persons
-    .map((item) => item.age)
-    .reduce((acc, current) => acc + current, 0);
+    .reduce((acc, current) => acc + current.age, 0);
   return Math.round(etaMedia / persons.length);
 }
 

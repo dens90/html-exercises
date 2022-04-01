@@ -1,6 +1,6 @@
 function firstUncompletedNote(notes) {
-  const firstNotCompletedNote = notes.find((value) =>
-    value.todos.some((x) => x.done === false)
+  const firstNotCompletedNote = notes.find((note) =>
+    note.todos.some((todo) => todo.done === false)
   );
   return firstNotCompletedNote;
 }

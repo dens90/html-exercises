@@ -1,0 +1,43 @@
+<html>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>Title</label>
+          <input type="text" id="todo-title" />
+        </div>
+        <div>
+          <label>Completed</label>
+          <input type="checkbox" id="todo-completed" />
+        </div>
+
+        <button type="submit" id="submit-todo">Invia</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  let url = "https://jsonplaceholder.typicode.com/posts";
+
+  function sendData(e) {
+    e.preventDefault();
+    const header = document.getElementById("todo-title").value;
+    const check = document.getElementById("todo-completed");
+    fetch(url, {
+      method: "POST",
+      body: JSON.stringify({
+        title: header,
+        check: check.checked,
+      }),
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((send) => console.log(send));
+  }
+
+  const btn = document.getElementById("submit-todo");
+  btn.addEventListener("click", sendData);
+</script>

@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; align-items: center"></div>
+  </body>
+</html>
+
+<script>
+  
+  fetch("https://jsonplaceholder.typicode.com/todos/4").then((fourTodo) => {
+    fourTodo.json().then((id) => {
+      console.log(id);
+      let header = document.createElement("h2");
+      let checkbox = document.createElement("input");
+      checkbox.setAttribute("type", "checkbox");
+
+      if (id.completed === true) {
+        checkbox.checked = "checked";
+      }
+
+      let box = document.getElementById("container");
+      header.innerHTML = id.title;
+      box.appendChild(header);
+      box.appendChild(checkbox);
+    });
+  });
+</script>

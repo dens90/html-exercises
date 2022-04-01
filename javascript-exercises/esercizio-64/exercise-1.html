@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <div id="container">
+      <button type="button" id="fetch-post">Fetch Post</button>
+      <button type="button" id="save-post">Save Post on LocalStorage</button>
+    </div>
+  </body>
+</html>
+
+<script>
+  let btn = document.getElementById("fetch-post");
+  let btnSave = document.getElementById("save-post");
+
+  btn.addEventListener("click", () => {
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+      .then((result) =>
+        result.json().then((data) => {
+          console.log(data);
+          return data;
+        })
+      )
+      .then((finalData) => {
+        btnSave.addEventListener("click", () => {
+          localStorage.setItem("finalData", JSON.stringify(finalData));
+        });
+      });
+  });
+
+</script>
+

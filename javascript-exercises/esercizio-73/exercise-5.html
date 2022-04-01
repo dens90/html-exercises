@@ -1,0 +1,50 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's List</h2>
+      <table id="person-table">
+        <tbody></tbody>
+      </table>
+      <button id="add-row">Add row</button>
+    </div>
+  </body>
+</html>
+
+<script>
+  function addRow() {
+    let tabRow = document.createElement("tr");
+    let table = document.getElementById("person-table").firstElementChild;
+    table.appendChild(tabRow);
+
+    let firstCell = document.createElement("td");
+    let firstInput = document.createElement("input");
+    Object.assign(firstInput, {
+      type: "text",
+      placeholder: "inserisci il tuo nome",
+    });
+    firstCell.appendChild(firstInput);
+    tabRow.appendChild(firstCell);
+
+    let secondCell = document.createElement("td");
+    let secondInput = document.createElement("input");
+    Object.assign(secondInput, {
+      type: "text",
+      placeholder: "Inserisci il tuo cognome",
+    });
+    secondCell.appendChild(secondInput);
+    tabRow.appendChild(secondCell);
+
+    let thirdCell = document.createElement("td");
+    let thirdInput = document.createElement("input");
+    Object.assign(thirdInput, {
+      type: "number",
+      placeholder: "Inserisci la tua età",
+    });
+    thirdCell.appendChild(thirdInput);
+    tabRow.appendChild(thirdCell);
+  }
+
+  let btn = document
+    .getElementById("add-row")
+    .addEventListener("click", addRow);
+</script>

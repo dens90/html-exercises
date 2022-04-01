@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <div id="container">
+      <ul class="todo-list"></ul>
+    </div>
+  </body>
+</html>
+
+<script>
+
+  let unorderList = document.querySelector(".todo-list");
+
+  fetch("https://jsonplaceholder.typicode.com/todos")
+    .then((todos) =>
+      todos.json().then((data) => {
+        console.log(data);
+        return data;
+      })
+    )
+    .then((listTodos) => {
+      let listTitles = listTodos.map((arrays) => {
+        let li = document.createElement("li");
+        li.innerHTML = arrays.title;
+        unorderList.appendChild(li);
+      });
+    });
+    
+</script>

@@ -1,6 +1,6 @@
 function uncompletedNotes(notes) {
-  const notComplete = notes.filter((value) =>
-    value.todos.some((x) => x.done === false)
+  const notComplete = notes.filter((note) =>
+    note.todos.some((todo) => todo.done === false)
   );
   return notComplete;
 }

@@ -1,0 +1,60 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's Form</h2>
+      <form id="person-form">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  let btn = document.querySelector("button");
+
+  function initForm() {
+    const form = document.getElementById("person-form");
+
+    let age = document.createElement("input");
+    Object.assign(age, {
+      type: "number",
+      placeholder: "inserisci la tua età",
+      id: "age",
+    });
+    form.insertAdjacentElement("afterbegin", age);
+
+    let lastName = document.createElement("input");
+    Object.assign(lastName, {
+      type: "text",
+      placeholder: "inserisci il tuo cognome",
+      id: "lastName",
+    });
+    form.insertAdjacentElement("afterbegin", lastName);
+
+    let firstName = document.createElement("input");
+    Object.assign(firstName, {
+      type: "text",
+      placeholder: "inserisci il tuo nome",
+      id: "firstName",
+    });
+    form.insertAdjacentElement("afterbegin", firstName);
+  }
+
+  initForm();
+
+  function submitPersonForm(e) {
+    e.preventDefault();
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
+    let age = document.getElementById("age").value;
+
+    const person = {
+      firstName,
+      lastName,
+      age,
+    };
+    console.log(person);
+  }
+
+  btn.addEventListener("click", submitPersonForm);
+</script>
