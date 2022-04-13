@@ -35,24 +35,27 @@ const jobs = [
 ];
 
 let person = function fetchPersonById(id){
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
       const findPerson = persons.find(person => person.id === id);
-      resolve(findPerson);
+      findPerson ? resolve(findPerson) : reject(new Error('id non trovato'))
     },1000)
   })
 }
 
 let job = function fetchJobById(id){
-  return new Promise((resolve) => {
+  return new Promise((resolve,reject) => {
     setTimeout(() => {
       const findJob = jobs.find(job => job.id === id);
-      resolve(findJob)
+      findJob ? resolve(findJob) : reject(new Error('lavoro non trovato'))
     },500)
   })
 }
-
-Promise.all([person(1),job(1)]).then((values) => {
-console.log(values)
+try {
+  Promise.race([person(1),job(1)]).then((value) => {
+console.log(value)
 })
+} catch (error) {
+  console.error(error)
+}
 
