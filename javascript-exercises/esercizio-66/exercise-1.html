@@ -18,7 +18,7 @@
       })
     )
     .then((listTodos) => {
-      let listTitles = listTodos.map((arrays) => {
+      let listTitles = listTodos.forEach((arrays) => {
         let li = document.createElement("li");
         li.innerHTML = arrays.title;
         unorderList.appendChild(li);
