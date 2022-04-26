@@ -34,14 +34,6 @@ const jobs = [
   },
 ];
 
-function fetchPersonById(id) {
-  return new Promise((resolve, reject) => {
-    setTimeout(()=> {
-      resolve(persons.find((person) => person.id === id));
-      reject(new Error('id non trovato'));
-    },1000)
-  });
-}
 
 function fetchPersonById(id) {
   return new Promise((resolve, reject) => {
